@@ -161,7 +161,9 @@ function App() {
             className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
-              <h2 className="font-Righteous text-xl">Forspex Entertainment</h2>
+              <h2 className="font-Righteous text-lg lg:text-xl">
+                Forspex Entertainment
+              </h2>
             </CardHeader>
             <CardBody className="overflow-hidden">
               <p className="text-lg">Roles:</p>
@@ -202,7 +204,9 @@ function App() {
             className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
-              <h2 className="font-Righteous text-xl">GDSC Tlemcen</h2>
+              <h2 className="font-Righteous text-lg lg:text-xl">
+                GDSC Tlemcen
+              </h2>
             </CardHeader>
             <CardBody>
               <p className="text-lg">Roles:</p>
@@ -230,7 +234,7 @@ function App() {
             className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
-              <h2 className="font-Righteous text-xl">Scorpio</h2>
+              <h2 className="font-Righteous text-lg lg:text-xl">Scorpio</h2>
             </CardHeader>
             <CardBody>
               <p className="text-lg">Roles:</p>
