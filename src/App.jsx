@@ -107,7 +107,7 @@ function App() {
               Projects
             </Link>
           </NavbarMenuItem>
-          <NavbarMenuItem className="mt-auto mb-8">
+          <NavbarMenuItem className="mt-auto mb-16">
             <p className="dark:text-white font-sans">Made with ❤ by Yacine</p>
           </NavbarMenuItem>
         </NavbarMenu>
