@@ -276,6 +276,7 @@ function App() {
             </CardHeader>
             <Image
               removeWrapper
+              draggable={false}
               alt="card background"
               className="z-0 w-full h-full object-cover"
               src={univLearn}
@@ -305,6 +306,7 @@ function App() {
             </CardHeader>
             <Image
               removeWrapper
+              draggable={false}
               alt="card background"
               className="z-0 w-full h-full object-cover"
               src={projectp}
