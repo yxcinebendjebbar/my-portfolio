@@ -107,9 +107,6 @@ function App() {
               Projects
             </Link>
           </NavbarMenuItem>
-          <NavbarMenuItem className="mt-auto mb-16">
-            <p className="dark:text-white font-sans">Made with ❤ by Yacine</p>
-          </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
       <section
@@ -360,6 +357,9 @@ function App() {
             <FaDiscord size={24} />
           </Link>
         </div>
+        <p className="text-default-500 text-sm font-sans mt-2">
+          Made with ❤ by Yacine
+        </p>
       </footer>
     </main>
   );
