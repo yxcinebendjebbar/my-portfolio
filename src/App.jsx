@@ -152,10 +152,10 @@ function App() {
             className="h-1 w-full bg-blue-600 rounded"
           ></motion.div>
         </div>
-        <div className="flex flex-col gap-8 items-center justify-center md:flex-row md:flex-wrap lg:flex-nowrap">
+        <div className="flex flex-col gap-8 items-center md:items-start justify-center md:flex-row md:flex-wrap lg:flex-nowrap">
           <Card
             isHoverable
-            className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
+            className="w-64 lg:w-72  p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
               <h2 className="font-Righteous text-lg lg:text-xl">
@@ -198,7 +198,7 @@ function App() {
           </Card>
           <Card
             isHoverable
-            className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
+            className="w-64 lg:w-72 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
               <h2 className="font-Righteous text-lg lg:text-xl">
@@ -228,7 +228,7 @@ function App() {
           </Card>
           <Card
             isHoverable
-            className="w-64 lg:w-72 h-64 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
+            className="w-64 lg:w-72 p-4 mt-8 lg:mt-16 hover:outline-2 hover:outline-primary-400"
           >
             <CardHeader>
               <h2 className="font-Righteous text-lg lg:text-xl">Scorpio</h2>
