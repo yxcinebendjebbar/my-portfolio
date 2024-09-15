@@ -28,6 +28,7 @@ import {
 import myAvatar from "./assets/my-avatar.jpg";
 import univLearn from "./assets/univ-learn.png";
 import projectp from "./assets/project-p.png";
+import supportli from "./assets/supportli.png";
 import { Reveal } from "./components/Reveal";
 
 function App() {
@@ -58,17 +59,43 @@ function App() {
           justify="end"
         >
           <NavbarItem>
-            <Link color="foreground" className="text-xl" href="#about">
+            <Link
+              color="foreground"
+              className="text-xl cursor-pointer"
+              as="li"
+              onClick={() => {
+                const element = document.getElementById("about");
+                element.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
               About
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" className="text-xl" href="#experiences">
+            <Link
+              color="foreground"
+              className="text-xl cursor-pointer"
+              as="li"
+              onClick={() => {
+                const element = document.getElementById("experiences");
+                element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Experiences
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" className="text-xl" href="#projects">
+            <Link
+              color="foreground"
+              className="text-xl cursor-pointer"
+              as="li"
+              onClick={() => {
+                const element = document.getElementById("projects");
+                element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Projects
             </Link>
           </NavbarItem>
@@ -82,8 +109,12 @@ function App() {
             <Link
               color="foreground"
               className="text-3xl"
-              href="#about"
-              onPress={() => setIsMenuOpen(false)}
+              as="li"
+              onPress={() => {
+                const element = document.getElementById("about");
+                element.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
             >
               About
             </Link>
@@ -92,8 +123,12 @@ function App() {
             <Link
               color="foreground"
               className="text-3xl"
-              href="#experiences"
-              onPress={() => setIsMenuOpen(false)}
+              as="li"
+              onPress={() => {
+                const element = document.getElementById("experiences");
+                element.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
             >
               Experiences
             </Link>
@@ -102,8 +137,12 @@ function App() {
             <Link
               color="foreground"
               className="text-3xl"
-              href="#projects"
-              onPress={() => setIsMenuOpen(false)}
+              as="li"
+              onPress={() => {
+                const element = document.getElementById("projects");
+                element.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
             >
               Projects
             </Link>
@@ -112,7 +151,7 @@ function App() {
       </Navbar>
       <section
         id="about"
-        className="w-screen mt-16 px-8 lg:px-32 md:grid grid-cols-2 gap-8 place-items-center"
+        className="w-screen mt-16 px-8 md:py-32 lg:px-32 md:grid grid-cols-2 gap-8 place-items-center"
       >
         <div>
           <div className="w-40 lg:w-72">
@@ -148,7 +187,10 @@ function App() {
           />
         </Reveal>
       </section>
-      <section id="experiences" className="w-screen mt-16 px-8 lg:px-32">
+      <section
+        id="experiences"
+        className="w-screen mt-16 md:py-32 px-8 lg:px-32"
+      >
         <div className="w-[17rem] lg:w-[28rem]">
           <Reveal>
             <h2 className="font-Righteous text-4xl lg:text-6xl text-center">
@@ -271,7 +313,7 @@ function App() {
           </Reveal>
         </div>
       </section>
-      <section id="projects" className="w-screen mt-16 px-8 lg:px-32">
+      <section id="projects" className="w-screen mt-16 md:py-32 px-8 lg:px-32">
         <div className="w-52 lg:w-96">
           <Reveal>
             <h2 className="font-Righteous text-4xl lg:text-6xl text-center">
@@ -286,7 +328,7 @@ function App() {
         </div>
         <div className="flex justify-center items-start flex-wrap gap-16 mt-8 lg:mt-16">
           <Reveal>
-            <Card isFooterBlurred className="w-64 md:w-72 lg:w-80 h-64">
+            <Card isFooterBlurred className="w-64 md:w-72 lg:w-80 h-64 light">
               <CardHeader className="absolute z-10 top-1 flex-col !items-center">
                 <h2 className="text-black font-Righteous text-2xl">
                   UNIV-LEARN
@@ -299,7 +341,7 @@ function App() {
                 className="z-0 w-full h-full object-cover"
                 src={univLearn}
               />
-              <CardFooter className="absolute bottom-0 gap-2 flex-col justify-center border-white/20 border-1 shadow-small z-10 left-0">
+              <CardFooter className="absolute bottom-0 gap-2 justify-center border-white/20 border-1 shadow-small z-10 left-0">
                 <Link isExternal href="https://univ-learn.vercel.app/">
                   <Button color="primary" variant="ghost">
                     View Project
@@ -317,7 +359,7 @@ function App() {
             </Card>
           </Reveal>
           <Reveal>
-            <Card isFooterBlurred className="w-64 md:w-72 lg:w-80 h-64">
+            <Card isFooterBlurred className="w-64 md:w-72 lg:w-80 h-64 light">
               <CardHeader className="absolute z-10 top-1 flex-col !items-center">
                 <h2 className="text-black font-Righteous text-2xl">
                   Project-P
@@ -337,6 +379,29 @@ function App() {
                 >
                   <Button color="secondary" variant="ghost">
                     Github
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          </Reveal>
+          <Reveal>
+            <Card isFooterBlurred className="w-64 md:w-72 lg:w-80 h-64 dark">
+              <CardHeader className="absolute z-10 top-1 flex-col !items-center">
+                <h2 className="text-white font-Righteous text-2xl">
+                  Supportli
+                </h2>
+              </CardHeader>
+              <Image
+                removeWrapper
+                draggable={false}
+                alt="card background"
+                className="z-0 w-full h-full object-cover"
+                src={supportli}
+              />
+              <CardFooter className="absolute bottom-0 gap-2 flex-col justify-center border-white/20 border-1 shadow-small z-10 left-0">
+                <Link isExternal href="https://www.supportli.net">
+                  <Button color="primary" variant="ghost">
+                    View Project
                   </Button>
                 </Link>
               </CardFooter>
