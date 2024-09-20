@@ -153,7 +153,7 @@ function App() {
         id="about"
         className="w-screen mt-16 px-8 md:py-32 lg:px-32 md:grid grid-cols-2 gap-8 place-items-center"
       >
-        <div>
+        <div className="xl:ml-24">
           <div className="w-40 lg:w-72">
             <Reveal>
               <h2 className="font-Righteous text-4xl lg:text-6xl text-center">
@@ -191,7 +191,7 @@ function App() {
         id="experiences"
         className="w-screen mt-16 md:py-32 px-8 lg:px-32"
       >
-        <div className="w-[17rem] lg:w-[28rem]">
+        <div className="w-[17rem] lg:w-[28rem] xl:ml-24">
           <Reveal>
             <h2 className="font-Righteous text-4xl lg:text-6xl text-center">
               My Experiences
@@ -314,7 +314,7 @@ function App() {
         </div>
       </section>
       <section id="projects" className="w-screen mt-16 md:py-32 px-8 lg:px-32">
-        <div className="w-52 lg:w-96">
+        <div className="w-52 lg:w-96 xl:ml-24">
           <Reveal>
             <h2 className="font-Righteous text-4xl lg:text-6xl text-center">
               My Projects
