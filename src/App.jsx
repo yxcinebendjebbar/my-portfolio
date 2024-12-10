@@ -88,7 +88,7 @@ function App() {
     }, 2000);
   }, []);
   return (
-    <main className="h-full w-full flex flex-col dark justify-center items-center bg-background px-16 pt-48 pb-16 gap-4">
+    <main className="h-full w-full flex flex-col dark justify-center items-center bg-background px-4 md:px-16 pt-48 pb-16 gap-4">
       {isLoading ? (
         <Spinner />
       ) : (
@@ -144,9 +144,13 @@ function App() {
                   - Founder of{" "}
                   <HoverCard.Root>
                     <HoverCard.Trigger>
-                      <Text size="2" color="blue" className="cursor-pointer">
+                      <Link
+                        href="https://www.gamemakersalgeria.tech/"
+                        target="_blank"
+                        className="cursor-pointer"
+                      >
                         {Player.about.founder}
-                      </Text>
+                      </Link>
                     </HoverCard.Trigger>
                     <HoverCard.Content maxWidth={"300px"}>
                       <Text size="2">{Player.about.desc}</Text>
