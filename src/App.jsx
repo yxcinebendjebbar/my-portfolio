@@ -1,7 +1,7 @@
 import {
   Avatar,
+  Badge,
   Box,
-  Button,
   Card,
   Flex,
   Grid,
@@ -55,8 +55,8 @@ const Player = {
     desc: "A community of game developers in Algeria.",
   },
   about2: {
-    role: "Open Source Contributor",
-    desc: "I ❤ to contribute to open source projects.",
+    role: "null",
+    desc: "A freelancing team that specializes in web development, mobile applications, and backend systems.",
   },
   projects: {
     supportli: {
@@ -64,18 +64,21 @@ const Player = {
       desc: "uniting people and technology to foster a customer service experience that puts human connections at its core.",
       thumbnail: supportli,
       link: "https://www.supportli.net/",
+      isLive: true,
     },
     univlearn: {
       name: "Univ-Learn",
       desc: "A platform that connects students with tutors.",
       thumbnail: univlearn,
       link: "",
+      isLive: false,
     },
     quadapp: {
       name: "quad-app",
       desc: "A tool allows you to quickly generate a robust Express template based on your preferences.",
       thumbnail: quadapp,
       link: "https://www.npmjs.com/package/quad-app",
+      isLive: true,
     },
   },
 };
@@ -134,9 +137,9 @@ function App() {
               </Grid>
             </Flex>
           </Card>
-          <Card className="sm:max-w-sm p-8 motion-preset-slide-right-md">
-            <Flex gap="3" align={"center"} direction={"column"}>
-              <Text size="4" weight="medium">
+          <Card className="w-full sm:max-w-sm p-8 motion-preset-slide-right-md">
+            <Flex gap="3" align={"start"} direction={"column"}>
+              <Text size="4" weight="medium" className="place-self-center">
                 /about
               </Text>
               <Box>
@@ -156,12 +159,17 @@ function App() {
                       <Text size="2">{Player.about.desc}</Text>
                     </HoverCard.Content>
                   </HoverCard.Root>{" "}
-                  &{" "}
+                  <br />- Team Leader of{" "}
                   <HoverCard.Root>
                     <HoverCard.Trigger>
-                      <Text size="2" color="blue" className="cursor-pointer">
+                      <Link
+                        size="2"
+                        href="https://null-delta.vercel.app/"
+                        target="_blank"
+                        className="cursor-pointer"
+                      >
                         {Player.about2.role}
-                      </Text>
+                      </Link>
                     </HoverCard.Trigger>
                     <HoverCard.Content maxWidth={"300px"}>
                       <Text size="2">{Player.about2.desc}</Text>
@@ -187,12 +195,18 @@ function App() {
                     src={value.thumbnail}
                     fallback={value.name.charAt(0)}
                   />
+
                   <Box>
-                    <Link href={value.link} target="_blank">
-                      <Text size="4" weight="bold">
-                        {value.name}
-                      </Text>
-                    </Link>
+                    <Flex align="center" gap="2">
+                      <Link href={value.link} target="_blank">
+                        <Text size="4" weight="bold">
+                          {value.name}
+                        </Text>
+                      </Link>
+                      <Badge color={value.isLive ? "green" : "red"}>
+                        {value.isLive ? "Live" : "Offline"}
+                      </Badge>
+                    </Flex>
                     <Text as="p" size="2" color="gray">
                       {value.desc}
                     </Text>
