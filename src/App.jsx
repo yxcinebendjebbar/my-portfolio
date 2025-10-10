@@ -260,7 +260,7 @@ function App() {
                     <Flex direction="column" key={edu.grad + edu.school}>
                       <Text size="2" weight="bold">
                         {edu.grad} in
-                        {edu.specialty ? ` ${edu.specialty}` : ""}
+                        {edu.specialty ? ` ${edu.specialty}` : ` ${edu.field}`}
                       </Text>
                       <Text size="2" color="gray">
                         {edu.school} {edu.ongoing ? "(Ongoing)" : ""}
