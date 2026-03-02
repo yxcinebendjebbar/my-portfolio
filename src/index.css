@@ -1,14 +1,17 @@
-@import url("https://fonts.cdnfonts.com/css/satoshi");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   @apply scroll-smooth antialiased;
-  font-family: "Satoshi", sans-serif;
-  --bg-primary: #222831;
-  --bg-secondary: #393e46;
-  --primary: #eeeeee;
-  --accent: #00adb5;
+}
+
+.radix-themes {
+  --default-font-family: 'Space Mono', monospace;
+  --heading-font-family: 'Space Grotesk', sans-serif;
+  
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --primary: #f8f9fa;
+  --accent: #6d28d9;
 }

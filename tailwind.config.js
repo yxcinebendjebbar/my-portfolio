@@ -4,6 +4,13 @@ export default {
 		"./index.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
-	theme: {},
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['"Space Grotesk"', 'sans-serif'],
+				mono: ['"Space Mono"', 'monospace'],
+			}
+		}
+	},
 	plugins: [require("tailwindcss-animate"), require('tailwindcss-motion')],
 };
