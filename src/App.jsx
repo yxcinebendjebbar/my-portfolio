@@ -352,15 +352,17 @@ function App() {
                               {project.isLive ? (
                                 <Badge color="green" radius="full" variant="soft" className="font-mono">Live</Badge>
                               ) : (
-                                <Badge color="orange" radius="full" variant="soft" className="font-mono">WIP</Badge>
+                                <Badge color="orange" radius="full" variant="soft" className="font-mono">In Progress</Badge>
                               )}
                             </Flex>
                             <Text size="2" color="gray" className="leading-relaxed font-mono flex-grow">
                               {project.desc}
                             </Text>
                             {project.link && (
-                              <Link href={project.link} target="_blank" className="mt-2 font-mono text-indigo-400 font-medium" underline="hover">
-                                Visit Project ↗
+                              <Link href={project.link} target="_blank" className="mt-2 text-indigo-400" underline="hover">
+                                <Text className="font-mono text-sm">
+                                  Visit Project ↗
+                                </Text>
                               </Link>
                             )}
                           </Flex>
