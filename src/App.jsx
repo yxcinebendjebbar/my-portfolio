@@ -94,7 +94,7 @@ const data = {
       name: "Qrayti",
       desc: "Platform connecting students with tutors across Algeria.",
       thumbnail: qrayti,
-      link: "https://www.qrayti.site/",
+      link: "https://qrayti.vercel.app/",
       live: true,
     },
     {
@@ -108,7 +108,7 @@ const data = {
       name: "Wisal",
       desc: "A modern approach to marriage, connecting people with shared values.",
       thumbnail: wisal,
-      link: "https://www.wisal.cc/",
+      link: "https://wisal-web.vercel.app/",
       live: true,
     },
     {
@@ -259,7 +259,6 @@ function App() {
         {/* About */}
         <Section label="About">
           <div className="about">
-            <img src={data.avatar} alt="Yacine Bendjebbar" className="about__avatar" />
             <p className="about__text">{data.about}</p>
           </div>
         </Section>
